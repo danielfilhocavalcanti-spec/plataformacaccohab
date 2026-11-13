@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Morador - CAC COHABI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Mantém o mesmo topo da tela de login para identidade visual -->
+  <header class="header-container">
+    <div class="logo-container">
+        <img src="log_cac_redimens.png" alt="Logo CAC COHABI" class="logo">
+    </div>
+    <!-- Exibe uma mensagem de boas-vindas no lugar do antigo formulário de login -->
+    <div class="user-access">
+        <div class="welcome-box" style="text-align: right; color: #333;">
+            <p>Olá, <strong>Morador</strong>! Bem-vindo ao painel.</p>
+            <a href="index.html" id="btnSair" style="font-size: 0.9rem; color: #d9534f; text-decoration: none;">Sair do sistema</a>
+        </div>
+    </div>
+  </header>
+
+  <!-- Mantém a mesma barra de navegação com os mesmos ícones/links -->
+  <nav class="nav-bar" aria-label="Menu principal">
+    <ul class="menu-list">
+      <li><a href="home.html" class="active">Início</a></li>
+      <li><a href="institucional.html">Sobre nós</a></li>
+      <li><a href="demandas.html">Demandas</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="noticias.html">Notícias</a></li>
+    </ul>
+  </nav>
+
+  <main style="max-width: 600px; margin: 40px auto; padding: 20px;">
+    <!-- NOVA SEÇÃO: Registro de problemas no bairro -->
+    <section class="report-section" style="background: #f9f9f9; padding: 25px; border-radius: 8px; border: 1px solid #e0e0e0;">
+      <h1 style="font-size: 1.6rem; color: #333; margin-bottom: 10px;">📢 Registrar Ocorrência ou Problema</h1>
+      <p style="color: #666; margin-bottom: 20px; font-size: 0.95rem;">
+        Utilize o espaço abaixo para relatar problemas com iluminação, buracos, saneamento ou outras demandas da sua rua.
+      </p>
+
+      <form id="formularioProblema">
+        <div class="input-group" style="margin-bottom: 15px;">
+          <label for="tipoProblema" style="display: block; margin-bottom: 5px; font-weight: bold;">Tipo de Problema:</label>
+          <select id="tipoProblema" required style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc;">
+            <option value="">Selecione uma categoria...</option>
+            <option value="iluminacao">Falta de Iluminação Pública</option>
+            <option value="asfalto">Buraco na Rua / Asfalto Danificado</option>
+            <option value="Saneamento">Vazamento de Água / Esgoto</option>
+            <option value="lixo">Acúmulo de Lixo / Entulho</option>
+            <option value="outro">Outros Assuntos</option>
+          </select>
+        </div>
+
+        <div class="input-group" style="margin-bottom: 15px;">
+          <label for="ruaProblema" style="display: block; margin-bottom: 5px; font-weight: bold;">Rua / Ponto de Referência:</label>
+          <input type="text" id="ruaProblema" placeholder="Ex: Rua das Flores, próximo ao número 120" required style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; box-sizing: border-box;">
+        </div>
+
+        <div class="input-group" style="margin-bottom: 20px;">
+          <label for="descricaoProblema" style="display: block; margin-bottom: 5px; font-weight: bold;">Descrição Detalhada:</label>
+          <textarea id="descricaoProblema" rows="5" placeholder="Descreva o que está acontecendo para que o conselho possa avaliar..." required style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; box-sizing: border-box; resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" class="btn-entrar" style="width: 100%; padding: 12px; cursor: pointer; font-size: 1rem;">Enviar Relato ao Conselho</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Scripts para comunicação futura com o banco -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="scripthome.js" defer></script>
+</body> 
+</html>
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conselho de Ação Comunitária da COHAB I</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-container">
+    <!-- Imagem -->
+    <div class="logo-container">
+      <img src="log_cac_redimens.png" alt="Logo CAC COHABI" class="logo">
+    </div>
+
+    <!-- Título -->
+    <h1>Conselho de Ação Comunitária da COHAB 1</h1>
+
+    <!-- Formulário de Login -->
+    <div class="user-access">
+      <form class="login-form">
+        <div class="input-group">
+          <label for="username">e-mail</label>
+          <input type="text" id="username" name="username" autocomplete="username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn-entrar">Entrar</button>
+      </form>
+
+      <!-- Parte "Esqueci minha senha" -->
+      <div class="esqueci-senha-box">
+        <a href="#" id="btnEsqueciSenha">Esqueci minha senha</a>
+      </div>
+
+      <!-- Área de cadastro -->
+      <div class="signup-row">
+        <span>Não tem cadastro?</span>
+        <a href="cadastro.html" class="btn-cadastrar">Cadastrar-se</a>
+      </div>
+
+      <!-- Links do Menu um embaixo do outro -->
+      <nav class="nav-bar" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="institucional.html">Sobre nós</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="noticias.html">Notícias</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <h1>Bem-vindo ao nosso conselho</h1>
+      <p>
+        Um espaço de participação e diálogo
+        para a comunidade.
+      </p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="scriptinicial.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha - CAC COHABI</title>
+    <link rel="stylesheet" href="stylecadastro.css"> <!-- Reutilizando seus estilos -->
+</head>
+<body>
+<form id="formularioRedefinir">
+  <div class="input-container" style="max-width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+      <h2>Criar Nova Senha</h2>
+      <p>Digite e confirme sua nova senha de acesso abaixo:</p>
+      
+      <div class="input-group">
+          <label for="novaSenha">Digite a nova senha (mínimo de 8 caracteres):</label>
+          <input type="password" id="novaSenha" required minlength="8" maxlength="72">
+      </div>
+      
+      <div class="input-group" style="margin-top: 15px;">
+          <label for="confirmaNovaSenha">Confirme a nova senha (mínimo de 8 caracteres):</label>
+          <input type="password" id="confirmaNovaSenha" required minlength="8" maxlength="72">
+      </div>
+      
+      <button type="submit" id="btnAtualizar" style="margin-top: 20px; width: 100%; padding: 10px;">Enviar</button>
+  </div>
+</form>
+
+     <!-- Importação do Supabase igual às outras telas -->
+     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+     <script src="scriptredefinir.js" defer></script>
+</body>
+</html>
